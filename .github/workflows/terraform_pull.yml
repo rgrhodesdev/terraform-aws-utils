@@ -107,7 +107,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: ${{ ((github.base_ref || inputs.target_branch) == 'main' && secrets.AWS_GITHUB_OIDC_PRD_PR_CREDENTIALS) || secrets.AWS_GITHUB_OIDC_NLV_PR_CREDENTIALS }}
+          role-to-assume: ${{ ((github.base_ref || inputs.target_branch) == 'main' && secrets.XXX) || secrets.XXXX }}
           role-session-name: GitHub_to_AWS_via_FederatedOIDC
           aws-region: eu-west-1
       
